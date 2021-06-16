@@ -39,8 +39,11 @@ function App() {
   const renderCharDetail = (props) => {
     const routeCharId = props.match.params.id;
     let foundChar = chars.find((element) => element.id === Number(routeCharId));
-
-    return <CharacterDetail char={foundChar} />;
+    if (foundChar !== undefined) {
+      return <CharacterDetail char={foundChar} />;
+    } else {
+      return <p>Sorry, but this character doesn't exist</p>;
+    }
   };
 
   return (
