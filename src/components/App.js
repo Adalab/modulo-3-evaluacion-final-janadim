@@ -10,6 +10,7 @@ function App() {
   const charsLocalStorageData = ls.get("chars", []);
   const [chars, setChars] = useState(charsLocalStorageData);
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
+  // const [inputValue, setInputValue] = useState("");
   //useStates
   console.log(chars);
 
@@ -30,6 +31,9 @@ function App() {
   const handleFilter = (ev) => {
     setFilterName(ev.target.value);
   };
+  // const handleInputValue = (ev) => {
+  //   setInputValue(ev.target.value);
+  // };
 
   //render
   const filteredChars = chars.filter((char) => {
