@@ -33,7 +33,7 @@ function App() {
 
   //render
   const filteredChars = chars.filter((char) => {
-    return char.name.toLowerCase().includes(filterName);
+    return char.name.toLowerCase().includes(filterName.toLowerCase());
   });
 
   const renderCharDetail = (props) => {
