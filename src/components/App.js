@@ -3,6 +3,8 @@ import getApiData from "../services/api";
 import FilterByName from "./FilterByName";
 import CharacterList from "./CharacterList";
 import ls from "../services/local-storage";
+import { Route, Switch } from "react-router-dom";
+import CharacterDetail from "./CharacterDetail";
 
 function App() {
   const charsLocalStorageData = ls.get("chars", []);
@@ -37,8 +39,17 @@ function App() {
   return (
     <>
       <h1>Rick and Morty</h1>
-      <FilterByName handleFilter={handleFilter} />
-      <CharacterList chars={filteredChars} />
+      <Switch>
+        <Route exact path="/">
+          <div>
+            <FilterByName handleFilter={handleFilter} />
+            <CharacterList chars={filteredChars} />
+          </div>
+        </Route>
+        <Route path="/character/">
+          <CharacterDetail />
+        </Route>
+      </Switch>
     </>
   );
 }
