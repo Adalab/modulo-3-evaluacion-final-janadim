@@ -8,7 +8,7 @@ function App() {
   const charsLocalStorageData = ls.get("chars", []);
   const [chars, setChars] = useState(charsLocalStorageData);
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
-  console.log(filterName);
+
   //useStates
 
   useEffect(() => {
@@ -31,7 +31,6 @@ function App() {
 
   //render
   const filteredChars = chars.filter((char) => {
-    console.log(filterName);
     return char.name.toLowerCase().includes(filterName);
   });
 
