@@ -10,9 +10,8 @@ function App() {
   const charsLocalStorageData = ls.get("chars", []);
   const [chars, setChars] = useState(charsLocalStorageData);
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
-  // const [inputValue, setInputValue] = useState("");
+
   //useStates
-  console.log(chars);
 
   useEffect(() => {
     if (chars.length === 0) {
@@ -31,9 +30,6 @@ function App() {
   const handleFilter = (ev) => {
     setFilterName(ev.target.value);
   };
-  // const handleInputValue = (ev) => {
-  //   setInputValue(ev.target.value);
-  // };
 
   //render
   const filteredChars = chars.filter((char) => {
@@ -56,7 +52,7 @@ function App() {
       <Switch>
         <Route exact path="/">
           <div>
-            <FilterByName handleFilter={handleFilter} />
+            <FilterByName handleFilter={handleFilter} filterName={filterName} />
             <CharacterList chars={filteredChars} />
           </div>
         </Route>
