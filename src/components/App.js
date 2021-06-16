@@ -1,12 +1,13 @@
 // import React, { useState } from "react";
+import getApiData from "../services/Api";
 
+function App() {
+  getApiData();
 
-
-// function Main() {
-  
-
- 
-
-//   return 
-// }
-// export default Main;
+  return (
+    <>
+      <h1>Rick and Morty</h1>
+    </>
+  );
+}
+export default App;
