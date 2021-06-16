@@ -11,6 +11,7 @@ function App() {
   const [chars, setChars] = useState(charsLocalStorageData);
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
   //useStates
+  console.log(chars);
 
   useEffect(() => {
     if (chars.length === 0) {
@@ -37,20 +38,10 @@ function App() {
 
   const renderCharDetail = (props) => {
     const routeCharId = props.match.params.id;
-    // const foundChar = chars.find((character) => {
-    //   console.log(character.id);
-    //   return character.id === routeCharId;
-    // });
+    let foundChar = chars.find((element) => element.id === Number(routeCharId));
 
-    return <CharacterDetail char={chars[routeCharId - 1]} />;
+    return <CharacterDetail char={foundChar} />;
   };
-  // console.log("router props", props.match.params.id);
-  // if (foundChar !== undefined) {
-  //   return <CharacterDetail />;
-  // } else {
-  //   return <p>No</p>;
-  // }
-  // };
 
   return (
     <>
