@@ -10,7 +10,6 @@ function App() {
   const charsLocalStorageData = ls.get("chars", []);
   const [chars, setChars] = useState(charsLocalStorageData);
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
-
   //useStates
 
   useEffect(() => {
@@ -36,6 +35,23 @@ function App() {
     return char.name.toLowerCase().includes(filterName);
   });
 
+  const renderCharDetail = (props) => {
+    const routeCharId = props.match.params.id;
+    // const foundChar = chars.find((character) => {
+    //   console.log(character.id);
+    //   return character.id === routeCharId;
+    // });
+
+    return <CharacterDetail char={chars[routeCharId - 1]} />;
+  };
+  // console.log("router props", props.match.params.id);
+  // if (foundChar !== undefined) {
+  //   return <CharacterDetail />;
+  // } else {
+  //   return <p>No</p>;
+  // }
+  // };
+
   return (
     <>
       <h1>Rick and Morty</h1>
@@ -46,9 +62,7 @@ function App() {
             <CharacterList chars={filteredChars} />
           </div>
         </Route>
-        <Route path="/character/">
-          <CharacterDetail />
-        </Route>
+        <Route path="/character/:id" render={renderCharDetail} />
       </Switch>
     </>
   );
