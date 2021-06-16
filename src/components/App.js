@@ -1,8 +1,14 @@
-// import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import getApiData from "../services/Api";
 
 function App() {
-  getApiData();
+  const [chars, setChars] = useState([]);
+
+  useEffect(() => {
+    getApiData().then((charsData) => {
+      setChars(charsData);
+    });
+  }, []);
 
   return (
     <>
