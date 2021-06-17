@@ -24,7 +24,8 @@
   color: black;
   font-size: 24px;
   padding: 10px;
-  background-color: #90c746;
+  background-color: #00afc8;
+  box-shadow: 4px 3px 5px #90c746;
 }
 .charList {
   display: grid;
@@ -41,11 +42,24 @@
   justify-self: center;
   margin-bottom: 50px;
   border: 2px solid #05464e;
-  // background-color: #00afc8;
+  background-color: #00afc8;
 }
 .li-item {
   width: 250px;
   background-color: #00afc8;
+}
+.change:hover {
+  animation-name: anicards;
+  animation-timing-function: ease-in-out;
+  animation-duration: 0.75s;
+}
+@keyframes anicards {
+  from {
+    width: 250px;
+  }
+  to {
+    width: 255px;
+  }
 }
 .li-img {
   width: 250px;
