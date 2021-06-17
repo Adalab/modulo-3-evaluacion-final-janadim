@@ -58,3 +58,33 @@
 .charSpec {
   background-color: #00afc8;
 }
+.details-container {
+  display: flex;
+  border: 2px solid chartreuse;
+  justify-content: center;
+  width: 40%;
+  margin: auto;
+}
+// .img-details {
+
+// }
+.descriptionText {
+  font-size: 24px;
+}
+.text-status,
+.text-spec,
+.text-origin,
+.text-episodes {
+  color: #00afc8;
+}
+.text-name {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.back-link {
+  font-size: 16px;
+  display: inline-block;
+  color: #00afc8;
+  padding: 3px;
+}
