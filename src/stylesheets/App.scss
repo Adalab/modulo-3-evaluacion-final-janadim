@@ -16,6 +16,20 @@
   display: block;
   padding: 20px 55px;
 }
+.chng {
+  animation-name: chngsearch;
+  animation-timing-function: ease-in;
+  animation-duration: 2s;
+  animation-iteration-count: 2;
+}
+@keyframes chngsearch {
+  from {
+    color: white;
+  }
+  to {
+    color: #05464e;
+  }
+}
 .inputForm {
   width: 200px;
   height: 30px;
@@ -61,6 +75,7 @@
     width: 255px;
   }
 }
+
 .li-img {
   width: 250px;
 }

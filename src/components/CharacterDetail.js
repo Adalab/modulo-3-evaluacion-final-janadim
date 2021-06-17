@@ -7,7 +7,6 @@ const CharacterDetail = (props) => {
       <ul className="descriptionText">
         <h2 className="text-name">{props.char.name}</h2>
         <li>
-          {" "}
           - Status: <span className="text-status">{props.char.status}</span>
         </li>
         <li>
@@ -17,7 +16,7 @@ const CharacterDetail = (props) => {
           - Origin: <span className="text-origin">{props.char.origin}</span>
         </li>
         <li>
-          - Episodes:{" "}
+          - Episodes:
           <span className="text-episodes">{props.char.episodes}</span>
         </li>
       </ul>

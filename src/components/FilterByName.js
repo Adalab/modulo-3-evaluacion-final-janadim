@@ -4,8 +4,8 @@ const FilterByName = (props) => {
   };
 
   return (
-    <form onSubmit={handleForm} className="form">
-      <label className="nameLabel" htmlFor="name">
+    <form onSubmit={handleForm} className="form ">
+      <label className="nameLabel chng" htmlFor="name">
         Search:
       </label>
       <input
