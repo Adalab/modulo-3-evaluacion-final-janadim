@@ -4,14 +4,17 @@ const FilterByName = (props) => {
   };
 
   return (
-    <form onSubmit={handleForm}>
-      <label htmlFor="name">Search:</label>
+    <form onSubmit={handleForm} className="form">
+      <label className="nameLabel" htmlFor="name">
+        Search:
+      </label>
       <input
         type="text"
         value={props.filterName}
         name="name"
         id="name"
         onChange={props.handleFilter}
+        className="inputForm"
       />
     </form>
   );

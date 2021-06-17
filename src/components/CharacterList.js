@@ -7,7 +7,7 @@ const CharacterList = (props) => {
   if (props.chars.length !== 0) {
     charElement = props.chars.map((eachChar) => {
       return (
-        <li key={eachChar.id}>
+        <li key={eachChar.id} className="charItem">
           <CharacterCard eachChar={eachChar} />
         </li>
       );
@@ -15,7 +15,7 @@ const CharacterList = (props) => {
   }
   return (
     <section>
-      <ul>{charElement}</ul>
+      <ul className="charList">{charElement}</ul>
     </section>
   );
 };

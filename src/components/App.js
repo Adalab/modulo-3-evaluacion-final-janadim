@@ -1,3 +1,4 @@
+import stylesheets from "../stylesheets/App.scss";
 import React, { useState, useEffect } from "react";
 import getApiData from "../services/api";
 import FilterByName from "./FilterByName";
@@ -5,6 +6,7 @@ import CharacterList from "./CharacterList";
 import ls from "../services/local-storage";
 import { Route, Switch } from "react-router-dom";
 import CharacterDetail from "./CharacterDetail";
+import Rickandmorty from "../images/Rickandmorty.png";
 
 function App() {
   const charsLocalStorageData = ls.get("chars", []);
@@ -47,18 +49,18 @@ function App() {
   };
 
   return (
-    <>
-      <h1>Rick and Morty</h1>
+    <section className="main-container">
+      <img className="main-img" src={Rickandmorty}></img>
       <Switch>
         <Route exact path="/">
-          <div>
+          <div className="list-container">
             <FilterByName handleFilter={handleFilter} filterName={filterName} />
-            <CharacterList chars={filteredChars} />
+            <CharacterList chars={filteredChars} filterName={filterName} />
           </div>
         </Route>
         <Route path="/character/:id" render={renderCharDetail} />
       </Switch>
-    </>
+    </section>
   );
 }
 export default App;

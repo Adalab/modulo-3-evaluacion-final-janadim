@@ -1,1 +1,49 @@
+@import "./core/reset";
+.list-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+.form {
+  margin: auto;
+}
+.nameLabel {
+  font-size: 30px;
+  display: block;
+  padding: 20px 55px;
+}
+.inputForm {
+  width: 200px;
+  height: 30px;
+  border-color: black;
+  margin-bottom: 50px;
+  color: black;
+  font-size: 24px;
+  padding: 10px;
+  background-color: #90c746;
+}
+.charList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+}
+.main-img {
+  width: 550px;
+  height: 200px;
+  display: block;
+  margin: auto;
+}
+.charItem {
+  justify-self: center;
+  padding-bottom: 50px;
+}
+.li-item {
+  width: 250px;
+}
+.li-img {
+  width: 250px;
+}
