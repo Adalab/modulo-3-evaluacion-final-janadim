@@ -39,11 +39,22 @@
 }
 .charItem {
   justify-self: center;
-  padding-bottom: 50px;
+  margin-bottom: 50px;
+  border: 2px solid #05464e;
+  // background-color: #00afc8;
 }
 .li-item {
   width: 250px;
+  background-color: #00afc8;
 }
 .li-img {
   width: 250px;
+}
+.charName {
+  background-color: #00afc8;
+  font-size: 20px;
+  color: black;
+}
+.charSpec {
+  background-color: #00afc8;
 }

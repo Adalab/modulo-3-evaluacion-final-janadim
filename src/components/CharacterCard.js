@@ -10,8 +10,9 @@ const CharacterCard = (props) => {
           title={props.eachChar.name}
           className="li-img"
         />
-        <h4>{props.eachChar.name}</h4>
-        <p>{props.eachChar.species}</p>
+
+        <h4 className="charName">{props.eachChar.name}</h4>
+        <p className="charSpec">{props.eachChar.species}</p>
       </article>
     </Link>
   );
