@@ -4,8 +4,10 @@
   flex-direction: column;
   justify-content: center;
   flex-wrap: wrap;
-  margin-left: 300px;
-  margin-right: 300px;
+  @media (min-width: 768px) {
+    margin-left: 300px;
+    margin-right: 300px;
+  }
 }
 
 .form {
@@ -54,10 +56,14 @@
   }
 }
 .main-img {
-  width: 550px;
-  height: 200px;
+  width: 350px;
+  height: 100px;
   display: block;
   margin: auto;
+  @media (min-width: 768px) {
+    width: 550px;
+    height: 200px;
+  }
 }
 .charItem {
   justify-self: center;
