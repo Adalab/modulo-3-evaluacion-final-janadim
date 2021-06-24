@@ -21,7 +21,7 @@ function App() {
         setChars(charsData);
       });
     }
-  }, []);
+  },[]);
 
   useEffect(() => {
     ls.set("chars", chars);

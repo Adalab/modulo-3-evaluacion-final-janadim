@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const CharacterDetail = (props) => {
   return (
     <article className="details-container">
-      <img src={props.char.image} className="img-details" />
+      <img src={props.char.image} alt="" className="img-details" />
       <ul className="descriptionText">
         <h2 className="text-name">{props.char.name}</h2>
         <li>
