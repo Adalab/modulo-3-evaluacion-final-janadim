@@ -1,6 +1,6 @@
 import stylesheets from "../stylesheets/App.scss";
 import React, { useState, useEffect } from "react";
-import getApiData from "../services/api";
+import getApiData from "../services/api.js";
 import FilterByName from "./FilterByName";
 import CharacterList from "./CharacterList";
 import ls from "../services/local-storage";
