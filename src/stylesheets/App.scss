@@ -12,7 +12,8 @@
 
 .form {
   display: block;
-  
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 4px #000803;
   
 }
 .nameLabel {
@@ -24,14 +25,15 @@
   animation-name: chngsearch;
   animation-timing-function: ease-in;
   animation-duration: 2s;
-  animation-iteration-count: 2;
+  animation-iteration-count: 1;
 }
 @keyframes chngsearch {
   from {
     color: white;
+  text-shadow: 2px 2px 4px #000803;
   }
   to {
-    color: #05464e;
+    color: #58deff;
   }
 }
 .inputForm {
@@ -42,7 +44,7 @@
   color: black;
   font-size: 24px;
   padding: 10px;
-  background-color: #00afc8;
+  background-color: #dafaff;
   box-shadow: 4px 3px 5px #90c746;
 }
 .charList {
