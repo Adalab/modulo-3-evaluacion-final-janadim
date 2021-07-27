@@ -107,10 +107,13 @@
   text-align: center;
 }
 .details-container {
+  width: 60vh;
   display: flex;
   border: 2px solid chartreuse;
   justify-content: center;
+  margin: auto;
   flex-direction: column;
+  border-radius: 8px;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -122,28 +125,40 @@
 
 .descriptionText {
   font-size: 16px;
+  text-align: center;
+  border-radius: 8px;
+  background-color: transparentize(#c2c8c9, 0.3);
+  color: white;
+  text-shadow: 2px 2px 4px #46574c;
   @media (min-width: 768px) {
     font-size: 24px;
+    text-align: left;
   }
 }
 .text-status,
 .text-spec,
 .text-origin,
 .text-episodes {
-  color: #00afc8;
+  color: #02282e;
+  text-shadow: 2px 2px 4px #f0e6e6;
 }
 .text-name {
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
 }
 .back-link {
-  display: block;
-  color: #00afc8;
-  padding: 3px;
-  font-size: 16px;
-  text-align: end;
+  color: rgb(229, 245, 245);
+  text-shadow: 2px 2px 4px #000000;
+  font-size: 24px;
+  text-align: center;
   @media (min-width: 768px) {
-    display: inline-block;
+    // display: inline-block;
   }
 }
+.img-details{
+  border-radius: 8px;
+}
+

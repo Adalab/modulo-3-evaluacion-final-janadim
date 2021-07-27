@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import Header from "./Header";
+
 
 const CharacterDetail = (props) => {
   return (
     <>
-      
+      <Link to="/" className="back">
+          <p className="back-link">Go back</p>
+      </Link>
       <article className="details-container">
         <img src={props.char.image} alt="" className="img-details" />
         <ul className="descriptionText">
@@ -24,9 +26,7 @@ const CharacterDetail = (props) => {
           </li>
         </ul>
 
-        <Link to="/">
-          <p className="back-link">Go back</p>
-        </Link>
+        
       </article>
     </>
   )
