@@ -15,6 +15,7 @@ function App() {
   const [filterName, setFilterName] = useState(ls.get("filterName", ""));
 
   //useStates
+  
 
   useEffect(() => {
     if (chars.length === 0) {
