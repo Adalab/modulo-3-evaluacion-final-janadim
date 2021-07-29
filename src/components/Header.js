@@ -1,21 +1,8 @@
-import rickandmortybg from "../images/rickandmortybg.jpg"
+import Rickandmorty from "../images/Rickandmorty.png";
 
 const Header = () => {
   return (
-    
-      
-        
-      
-        <img
-          src = {rickandmortybg}
-          alt="backgroundimage"
-          title="background image"
-          className="header-img"
-        />
-       
-        
-      
-    
+    <img className="main-img" src={Rickandmorty}></img>   
   );
 };
 export default Header;

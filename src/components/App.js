@@ -7,6 +7,8 @@ import ls from "../services/local-storage";
 import { Route, Switch } from "react-router-dom";
 import CharacterDetail from "./CharacterDetail";
 import Rickandmorty from "../images/Rickandmorty.png";
+import Header from "./Header";
+import Footer from "./Footer";
 
 
 function App() {
@@ -53,7 +55,7 @@ function App() {
   return (
     <section className="main-container">
       
-      <img className="main-img" src={Rickandmorty}></img>
+      <Header/>
       <Switch>
         <Route exact path="/">
           <div className="list-container">
@@ -64,6 +66,7 @@ function App() {
         </Route>
         <Route path="/character/:id" render={renderCharDetail} />
       </Switch>
+      <Footer/>
     </section>
   );
 }
